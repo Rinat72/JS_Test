@@ -7,16 +7,54 @@
 </head>
 <body>
 
+
+
+<p onclick="alert('Нажал onclick');"> 
+  <a href="https://ya.ru" onclick="return true;">   Нажми на меня onclick   </a>
+</p>
+
+
+
+
+<p id="clickable">Нажми на меня getElementById</p>
+<script>
+  document
+    .getElementById('clickable')
+    .addEventListener('click', () => {
+      alert('Нажал getElementById');
+    });
+</script>
+
+
+<template> 
 <script>
 
-function Ilsur(Name) {
-alert("Say Hello, " + Name);
+
+
+function Name(Argument) {
+alert("Привет, " + Argument);
 }
 
-Ilsur("Ильсур");
+Name("Ринат");
+
+
+function getName() {
+return ("Ретерн");
+}
+let Var=getName();
+alert (Var);
+
+
+
 
 </script>
-    
+
+</template>
+
+
+
+
+
 </body>
 </html>
 
