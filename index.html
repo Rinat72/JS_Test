@@ -4,55 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+<style> 
+ body {
+  background-color: burlywood;
+  padding:  100px;
+  margin: ;
+ }
+
+</style>
+
+
+<script>
+function CheckPass() {
+  let Pass = document.getElementById("PassBox")
+  let PassEnter = Pass.value;
+  if (PassEnter==="158851") {
+return true;
+  }
+  alert("Доступ запрещен");
+  return false;
+}
+
+</script>
+
+
 </head>
 <body>
 
+<p style="font: size 30px;" on> Пароль для перехода по ссылке ниже<input id="PassBox" type="password"></p>
+<a href="function.html" onclick="return CheckPass();"> Веди пароль и перейдешь на function.html </a>
 
 
-<p onclick="alert('Нажал onclick');"> 
-  <a href="https://ya.ru" onclick="return true;">   Нажми на меня onclick   </a>
+
+
+<p onclick="alert('Return выставлен на false');"> 
+  <a href="https://ya.ru" onclick="return false;">Переход Яндекс (p onclick="alert('Нажал onclick');")  href="https://ya.ru" onclick="return false;" </a>
 </p>
 
 
 
 
-<p id="clickable">Нажми на меня getElementById</p>
-<script>
-  document
-    .getElementById('clickable')
-    .addEventListener('click', () => {
-      alert('Нажал getElementById');
-    });
-</script>
-
-
 <template> 
-<script>
 
-
-
-function Name(Argument) {
-alert("Привет, " + Argument);
-}
-
-Name("Ринат");
-
-
-function getName() {
-return ("Ретерн");
-}
-let Var=getName();
-alert (Var);
-
-
-
-
-</script>
-
+  <p id="clickable">Нажми на меня getElementById</p>
+  <script>
+    document
+      .getElementById('clickable')
+      .addEventListener('click', () => {
+        alert('Нажал getElementById');
+      });
+  </script>
 </template>
 
 
+<h2>Введите пароль:</h2>
+  <input id="PassBox2" type="text" placeholder="Пароль">
+  <button onclick="CheckPass2()">Проверить</button>
 
+  <script>
+    function CheckPass2() {
+      let Pass2 = document.getElementById("PassBox2");
+
+      // Выводим весь DOM-элемент в консоль
+      console.log("Содержимое Pass2:");
+      console.log(Pass2);
+
+      // Выводим конкретно значение
+      console.log("Что ввёл пользователь:");
+      console.log(Pass2.value);
+
+      // Пример сравнения
+      if (Pass2.value === "123123") {
+        alert("Пароль верный");
+      } else {
+        alert("Пароль неверный");
+      }
+    }
+  </script>
 
 
 </body>
